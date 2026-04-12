@@ -16,7 +16,6 @@ It includes interactive UI, project showcases, and a contact system connected wi
 - 📂 Projects showcase with GitHub links
 - 📄 Resume access via Google Drive
 - 📬 Contact form with backend + database integration
-- 🌌 Custom UI effects (mouse-based fog effect)
 
 ---------------------------------------------------------------------------------------------------------------------------------------
 
