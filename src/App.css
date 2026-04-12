@@ -1,38 +1,293 @@
-.App {
+/* 🔥 GLOBAL */
+body {
+  margin: 0;
+  background: black;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* Sections */
+.section {
+  padding: 120px 80px;
   text-align: center;
+  position: relative;
+  z-index: 1;
 }
 
-.App-logo {
-  height: 40vmin;
+/* 🔥 TITLES */
+.section-title {
+  font-size: 55px;
+  font-weight: bold;
+  margin-bottom: 40px;
+  text-shadow: 0 0 25px cyan;
+}
+
+/* 🔥 HOME */
+.main-name {
+  font-size: 95px;
+  font-weight: bold;
+  text-shadow: 0 0 40px cyan;
+}
+
+.subtitle {
+  font-size: 30px;
+  color: #aaa;
+  margin-bottom: 20px;
+}
+
+/* BUTTON */
+button {
+  padding: 12px 25px;
+  background: cyan;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+button:hover {
+  background: white;
+  color: black;
+}
+
+/* 🔥 ABOUT */
+.about-container {
+  display: flex;
+  gap: 80px;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatar-large {
+  width: 500px;
+  border-radius: 30%;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.avatar-large:hover {
+  transform: scale(1.05);
+}
+
+.about-content {
+  max-width: 600px;
+  font-size: 20px;
+  line-height: 1.8;
+  text-align: left;
+}
+
+/* Social Icons */
+.socials img {
+  width: 35px;
+  margin: 0 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.socials img:hover {
+  transform: scale(1.2);
+}
+
+/* 🔥 SKILLS */
+.skill-boxes {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+}
+
+.card {
+  background: rgba(255,255,255,0.05);
+  padding: 20px 30px;
+  border-radius: 20px;
+  font-size: 20px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.skill-display {
+  margin-top: 30px;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* 🔥 EDUCATION */
+.edu-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.edu-container .card {
+  width: 450px;
+  
+}
+
+/* 🔥 PROJECTS */
+.project-container {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+}
+
+.project-container img {
+  width: 500px;
+  border-radius: 10px;
+}
+
+/* 🔥 CONTACT */
+input, textarea {
+  width: 300px;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  border: none;
+}
+
+/* Navbar always top */
+.navbar {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 40px;
+  background: rgba(0, 255, 200, 0.15);
+  padding: 15px 40px;
+  border-radius: 20px;
+  backdrop-filter: blur(12px);
+  z-index: 10; /* 🔥 VERY IMPORTANT */
+}
+
+/* Nav items */
+.nav-item {
+  text-align: center;
+  cursor: pointer;
+  color: white;
+  transition: 0.3s;
+  padding: 5px;
+}
+
+/* Strong hover effect */
+.nav-item:hover {
+  color: cyan;
+  transform: scale(1.15);
+}
+
+/* Make icons clickable clearly */
+.nav-item p {
+  margin: 0;
+  font-size: 12px;
+}
+
+/* 🔥 FOG ONLY BACKGROUND */
+.fog {
+  position: fixed;
+  width: 550px;
+  height: 550px;
+  background: radial-gradient(circle, rgba(0,200,255,0.35), transparent 70%);
+  border-radius: 50%;
   pointer-events: none;
+  transform: translate(-50%, -50%);
+  filter: blur(90px);
+  z-index: 0; /* IMPORTANT */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Sub titles */
+.sub-title {
+  font-size: 28px;
+  margin-bottom: 20px;
+  text-shadow: 0 0 10px cyan;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Spacing for cards */
+.spaced {
+  margin-bottom: 25px;
+}
+
+/* Skill list format */
+.skill-list {
+  margin-top: 30px;
+  font-size: 35px;
+}
+
+/* Contact text bigger */
+.contact-text {
+  font-size: 22px;
+  margin: 10px;
+}
+
+/* Bigger input boxes */
+input, textarea {
+  width: 350px;
+  padding: 10px;
+  margin: 10px;
+  font-size: 16px;
+}
+
+/* Project link */
+.project-link img{
+  display: block;
+  margin-top: 10px;
+  color: cyan;
+  text-decoration: none;
+  width: 35px;
+  margin: 0 15px;
+  cursor: pointer;
+  transition: 0.3s;
+
+}
+
+.project-link:hover {
+  text-decoration: underline;
+}
+
+.edu-list {
+  text-align: left;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.edu-list li {
+  margin-bottom: 15px;
+}
+
+.contact-form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/* spacing */
+.contact-form input,
+.contact-form textarea {
+  width: 350px;
+  margin-bottom: 15px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.app {
+  position: relative;
+}
+
+/* Ensure content always clickable */
+.content {
+  position: relative;
+  z-index: 5;
+}
+
+.skill-list ul {
+  text-align: left;
+  display: inline-block;
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+.skill-list li {
+  margin-bottom: 10px;
 }
