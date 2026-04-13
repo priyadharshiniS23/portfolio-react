@@ -10,7 +10,7 @@ export default function About() {
           src="/avatar.png"
           alt="avatar"
           className="avatar-large"
-          onClick={() => alert("Hi👋 Priyadharshini S")}
+          onClick={() => alert("Hi 👋, I’m the account holder 👤. Glad to have you here 😊—thank you for visiting my portfolio 💼.")}
         />
 
         <div className="about-content">
