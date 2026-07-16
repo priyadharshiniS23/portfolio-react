@@ -3,7 +3,7 @@ import { useState } from "react";
 export default function Skills() {
 
   const data = {
-    programming: ["Java", "JavaScript"],
+    programming: ["Java", "SQL"],
     development: [
       "HTML, CSS, JS",
       "Node.js & Express.js",

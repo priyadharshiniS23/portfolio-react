@@ -1,20 +1,37 @@
+import React from "react";
+
 export default function Contact() {
 
-  const submit = (e) => {
+  const submit = async (e) => {
     e.preventDefault();
 
-    fetch("http://localhost:5000/contact", {
-      method: "POST",
-      headers: {"Content-Type": "application/json"},
-      body: JSON.stringify({
-        name: e.target.name.value,
-        email: e.target.email.value,
-        message: e.target.message.value
-      })
-    })
-    .then(res => res.text())
-    .then(msg => alert(msg));
-     e.target.reset();
+    const form = e.target;
+
+    const data = {
+      name: form.name.value,
+      email: form.email.value,
+      message: form.message.value
+    };
+
+    try {
+      await fetch("http://localhost:5000/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(data)
+      });
+
+      // ✅ Show alert
+      alert("Message saved✅");
+
+      // ✅ Clear form AFTER clicking OK
+      form.reset();
+
+    } catch (error) {
+      console.error(error);
+      alert("Error saving message ❌");
+    }
   };
 
   return (
@@ -22,17 +39,16 @@ export default function Contact() {
 
       <h1 className="section-title">Contact Me</h1>
 
-      <p className="contact-text">📧 priyadharshiniofficial23@gmail.com</p>
-      <p className="contact-text">📞 8220843942</p>
+      <p className="contact-info">📧 priyadharshiniofficial23@gmail.com</p>
+      <p className="contact-info">📞 8220843942</p>
 
       <form onSubmit={submit} className="contact-form">
 
-        <input name="name" placeholder="Name" required />
-        <input name="email" placeholder="Email" required />
-        <textarea name="message" placeholder="Message"></textarea>
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" placeholder="Your Message" required />
 
-        <button>Submit</button>
-        <br/><br/>
+        <button type="submit">Send</button>
 
       </form>
 

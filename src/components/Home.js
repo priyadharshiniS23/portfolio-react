@@ -6,7 +6,7 @@ export default function Home() {
       <h2 className="subtitle">BE COMPUTER SCIENCE AND ENGINEERING</h2>
 
    <a 
-  href="https://drive.google.com/file/d/1k_2ONMVq-urZeAMX2z99sczKIiRbLTlE/view?usp=sharing" 
+  href="https://drive.google.com/file/d/1QtAUdjRh_2Znj06wvsNZ1bXNtShnpfw1/view?usp=sharing" 
   target="_blank" 
   rel="noreferrer"
 >

@@ -15,8 +15,8 @@ export default function About() {
 
         <div className="about-content">
           <p>
-            I am a third-year Computer Science Engineering student at RMK College of Engineering and Technology with a strong academic record (CGPA: 8.49). 
-            I am a passionate full-stack developer with a keen interest in cloud computing and continuously expanding my expertise in cloud technologies. 
+            I am a final-year Computer Science Engineering student at RMK College of Engineering and Technology with a strong academic record (CGPA: 8.52). 
+            I am a passionate full-stack developer and java with a keen interest in cloud computing and continuously expanding my expertise in cloud technologies. 
             I also possess a solid foundation in SQL and database management. 
             I am eager to gain practical industry experience and contribute to innovative, real-world projects.
           </p>

@@ -36,7 +36,7 @@ export default function Education() {
           </div>
 
           <div className="card spaced">
-            <li>Full Stack Development Intern at <b>Future Intern</b> (Current)<br/><br/>
+            <li>Full Stack Development Intern at <b>Future Intern</b> <br/><br/>
             Working on mini CRM and business website.</li>
           </div>
         </div>
